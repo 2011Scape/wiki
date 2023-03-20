@@ -1,0 +1,32 @@
+
+<%= simple_form_for(@item) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :item_id %>
+    <%= f.input :name %>
+    <%= f.input :examine %>
+    <%= f.input :destroy_message %>
+    <%= f.input :tradeable %>
+    <%= f.input :weight %>
+    <%= f.input :attack_speed %>
+    <%= f.input :attack_stab %>
+    <%= f.input :attack_slash %>
+    <%= f.input :attack_crush %>
+    <%= f.input :attack_magic %>
+    <%= f.input :attack_range %>
+    <%= f.input :defence_stab %>
+    <%= f.input :defence_slash %>
+    <%= f.input :defence_crush %>
+    <%= f.input :defence_magic %>
+    <%= f.input :defence_range %>
+    <%= f.input :prayer %>
+    <%= f.input :range_strength %>
+    <%= f.input :magic_damage %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
